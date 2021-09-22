@@ -23,12 +23,12 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-## [](https://i.imgur.com/TzLE2Tk.gif)##
+![](https://i.imgur.com/TzLE2Tk.gif)##
 
 Here's a another walkthrough showing The app icon in the home screen and User stays logged in across restarts
 
 
-![](https://i.imgur.com/xihPwys.gif)
+![](https://i.imgur.com/nBeb8nf.gif)
 
 
 
