@@ -19,11 +19,18 @@ class HomeTableTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      loadtweet()
+        //numberOftweet = 20
+        //loadtweet()
         
         myRefreshControl.addTarget(self, action: #selector(loadtweet), for: .valueChanged)
-        tableView.refreshControl = myRefreshControl
+        self.tableView.refreshControl = myRefreshControl
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadtweet()
     }
     
     @objc func loadtweet(){
@@ -114,6 +121,10 @@ class HomeTableTableViewController: UITableViewController {
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
+        
+        cell.setfavorite(tweetArray[indexPath.row]["favorited"]as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         
         
         return cell
